@@ -1,0 +1,440 @@
+{
+	"name": "txt-syntax",
+	"displayName": "Txt Syntax",
+	"description": "highlight text files(.txt, .out .tmp, .log, .ini, .cnf ...) and provide general utility tools for text documents",
+	"version": "0.2.2",
+	"publisher": "xshrim",
+	"repository": "https://github.com/xshrim/vscode-txt-syntax",
+	"icon": "logo.png",
+	"engines": {
+		"vscode": "^1.23.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"txt",
+		"text",
+		"syntax",
+		"makefile",
+		"codelens",
+		"highlight",
+		"txt folding",
+		"filter lines",
+		"highlight line",
+		"highlight words"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./src/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "txt",
+				"aliases": [
+					"TXT",
+					"txt"
+				],
+				"extensions": [
+					".txt",
+					".text"
+				],
+				"configuration": "./txt.language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "txt",
+				"scopeName": "source.txt",
+				"path": "./syntaxes/txt.tmLanguage.json"
+			}
+		],
+		"commands": [
+			{
+				"title": "Search Word",
+				"command": "txtsyntax.searchit",
+				"category": "TxtSyntax"
+			},
+			{
+				"title": "Open File",
+				"command": "txtsyntax.openit",
+				"category": "TxtSyntax"
+			},
+			{
+				"title": "Enable CodeLens",
+				"command": "txtsyntax.enableCodeLens",
+				"category": "TxtSyntax"
+			},
+			{
+				"title": "Disable Codelens",
+				"command": "txtsyntax.disableCodeLens",
+				"category": "TxtSyntax"
+			},
+			{
+				"title": "Send text to Terminal",
+				"command": "txtsyntax.sendText",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.toggleHighlight",
+				"title": "Highlight Toggle",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.removeHighlight",
+				"title": "Highlight Remove List",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.cleanHighlights",
+				"title": "Highlight Clean",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.toggleRegExpHighlight",
+				"title": "Highlight Expression",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.toggleHighlightWithOptions",
+				"title": "Highlight Selection with Options",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.setHighlightMode",
+				"title": "Set Highlight Mode",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.treeRemoveHighlight",
+				"title": "Remove",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.treeHighlightOptions",
+				"title": "Change Options",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.toggleSidebar",
+				"title": "Highlight Toggle Sidebar",
+				"category": "TxtSyntax"
+			},
+			{
+				"command": "txtsyntax.findPrevious",
+				"title": "Highlight Back",
+				"category": "TxtSyntax",
+				"icon": {
+					"light": "resources/icons/arrow-left.svg",
+					"dark": "resources/icons/arrow-left-white.svg"
+				}
+			},
+			{
+				"command": "txtsyntax.findNext",
+				"title": "Highlight Next",
+				"category": "TxtSyntax",
+				"icon": {
+					"light": "resources/icons/arrow-right.svg",
+					"dark": "resources/icons/arrow-right-white.svg"
+				}
+			},
+			{
+				"command": "txtsyntax.enableHighlight",
+				"title": "Enable Highlight",
+				"icon": "$(paintcan)"
+			},
+			{
+				"command": "txtsyntax.disableHighlight",
+				"title": "Disable Highlight",
+				"icon": "$(paintcan)"
+			},
+			{
+				"command": "txtsyntax.enableVisibility",
+				"title": "Enable Visbility",
+				"icon": "$(eye)"
+			},
+			{
+				"command": "txtsyntax.disableVisibility",
+				"title": "Disable Visbility",
+				"icon": "$(eye-closed)"
+			},
+			{
+				"command": "txtsyntax.toggleFocusMode",
+				"title": "Toggle Focus Mode",
+				"icon": "$(symbol-keyword)"
+			},
+			{
+				"command": "txtsyntax.deleteFilter",
+				"title": "Delete This Filter",
+				"icon": "$(dialog-close)"
+			},
+			{
+				"command": "txtsyntax.editFilter",
+				"title": "Edit Regex for This Filter",
+				"icon": "$(edit)"
+			},
+			{
+				"command": "txtsyntax.addFilter",
+				"title": "Add a Filter",
+				"icon": "$(plus)"
+			},
+			{
+				"command": "txtsyntax.exportFilters",
+				"title": "Export Filters"
+			},
+			{
+				"command": "txtsyntax.importFilters",
+				"title": "Import Filters"
+			}
+		],
+		"configuration": {
+			"properties": {
+				"txtsyntax.searchlink": {
+					"type": "string",
+					"default": "https://www.google.com/search?q={{keyword}}"
+				},
+				"txtsyntax.associations": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						".ini",
+						".cf",
+						".cnf",
+						".conf",
+						".cfg",
+						".unx",
+						".eds",
+						".log",
+						".out",
+						".err",
+						".inf",
+						".info",
+						".tmp",
+						".temp",
+						".file",
+						".repo",
+						".plain",
+						".desktop",
+						".properties"
+					]
+				},
+				"txtsyntax.enableCodeLens": {
+					"type": "boolean",
+					"default": true
+				},
+				"txtsyntax.enableHighlightLine": {
+					"type": "boolean",
+					"default": false
+				},
+				"txtsyntax.highlightLineBorderColor": {
+					"type": [
+						"string"
+					],
+					"default": "#65EAB9",
+					"description": "Change the border color. (Ex: 'red', '#FFF' #FFFFFFF, 'RGB(255,255,255)','RGB(255, 255, 255. 0.5) )"
+				},
+				"txtsyntax.highlightLineBorderWidth": {
+					"type": [
+						"string"
+					],
+					"default": "1px"
+				},
+				"txtsyntax.highlightLineBorderStyle": {
+					"type": [
+						"string"
+					],
+					"enum": [
+						"solid",
+						"dashed",
+						"inset",
+						"double",
+						"groove",
+						"outset",
+						"ridge"
+					],
+					"default": "dashed"
+				},
+				"txtsyntax.highlightColors": {
+					"default": [
+						{
+							"light": "#b3d9ff",
+							"dark": "cyan"
+						},
+						{
+							"light": "#e6ffb3",
+							"dark": "pink"
+						},
+						{
+							"light": "#b3b3ff",
+							"dark": "lightgreen"
+						},
+						{
+							"light": "#ffd9b3",
+							"dark": "magenta"
+						},
+						{
+							"light": "#ffb3ff",
+							"dark": "cornflowerblue"
+						},
+						{
+							"light": "#b3ffb3",
+							"dark": "orange"
+						},
+						{
+							"light": "#ffff80",
+							"dark": "green"
+						},
+						{
+							"light": "#d1e0e0",
+							"dark": "red"
+						}
+					]
+				},
+				"txtsyntax.highlightBox": {
+					"default": {
+						"light": false,
+						"dark": true
+					}
+				},
+				"txtsyntax.defaultHighlightMode": {
+					"default": 0
+				},
+				"txtsyntax.showHighlightSidebar": {
+					"type": "boolean",
+					"default": false
+				}
+			}
+		},
+		"views": {
+			"explorer": [
+				{
+					"id": "txtsyntaxHighlightExplore",
+					"name": "Highlight",
+					"when": "showSidebar"
+				},
+				{
+					"id": "filters",
+					"name": "Filters"
+				}
+			]
+		},
+		"menus": {
+			"editor/context": [
+				{
+					"command": "txtsyntax.searchit",
+					"group": "txsyntax",
+					"when": "editorTextFocus"
+				},
+				{
+					"command": "txtsyntax.openit",
+					"group": "txsyntax",
+					"when": "editorTextFocus && resourceLangId == txt"
+				},
+				{
+					"command": "txtsyntax.toggleHighlight",
+					"group": "txsyntax",
+					"when": "editorTextFocus"
+				},
+				{
+					"command": "txtsyntax.cleanHighlights",
+					"group": "txsyntax",
+					"when": "editorTextFocus"
+				},
+				{
+					"command": "txtsyntax.findPrevious",
+					"group": "txsyntax",
+					"when": "editorTextFocus"
+				},
+				{
+					"command": "txtsyntax.findNext",
+					"group": "txsyntax",
+					"when": "editorTextFocus"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "txtsyntax.treeRemoveHighlight",
+					"when": "view == txtsyntaxHighlightExplore"
+				},
+				{
+					"command": "txtsyntax.treeHighlightOptions",
+					"when": "view == txtsyntaxHighlightExplore"
+				},
+				{
+					"command": "txtsyntax.findPrevious",
+					"when": "view == txtsyntaxHighlightExplore",
+					"group": "inline"
+				},
+				{
+					"command": "txtsyntax.findNext",
+					"when": "view == txtsyntaxHighlightExplore",
+					"group": "inline"
+				},
+				{
+					"command": "txtsyntax.editFilter",
+					"when": "view == filters",
+					"group": "inline@1"
+				},
+				{
+					"command": "txtsyntax.disableHighlight",
+					"when": "view == filters && viewItem =~ /^lit/",
+					"group": "inline@2"
+				},
+				{
+					"command": "txtsyntax.enableHighlight",
+					"when": "view == filters && viewItem =~ /^unlit/",
+					"group": "inline@3"
+				},
+				{
+					"command": "txtsyntax.disableVisibility",
+					"when": "view == filters && viewItem =~ /-visible/",
+					"group": "inline@4"
+				},
+				{
+					"command": "txtsyntax.enableVisibility",
+					"when": "view == filters && viewItem =~ /-invisible/",
+					"group": "inline@5"
+				},
+				{
+					"command": "txtsyntax.deleteFilter",
+					"when": "view == filters",
+					"group": "inline@6"
+				}
+			],
+			"view/title": [
+				{
+					"command": "txtsyntax.addFilter",
+					"when": "view == filters",
+					"group": "navigation"
+				},
+				{
+					"command": "txtsyntax.toggleFocusMode",
+					"when": "view == filters",
+					"group": "navigation"
+				},
+				{
+					"command": "txtsyntax.importFilters",
+					"when": "view == filters"
+				},
+				{
+					"command": "txtsyntax.exportFilters",
+					"when": "view == filters"
+				}
+			]
+		}
+	},
+	"__metadata": {
+		"id": "c5900888-28e9-40d6-84d0-d1645e62f4cc",
+		"publisherId": "9c1536ad-79f2-4254-9362-84cb06f98797",
+		"publisherDisplayName": "xshrim",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1677952212255,
+		"preRelease": false
+	}
+}

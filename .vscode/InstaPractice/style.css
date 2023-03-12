@@ -1,0 +1,50 @@
+
+.card{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: url(Bimg.avif)  center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+
+}
+.card::before,
+.card::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(60%+ 35px);
+    background-color: rgb(75, 174, 235);
+    transition: tranform .5s .25s ease-in;
+    z-index: -1;
+}
+.card::before{
+top: 0;
+clip-path: polygon(0 0,100% 0,100% 45%,0% 100%);
+transform: translateY(-100%);
+
+}
+.card::after{
+    bottom: 0;
+    clip-path: polygon(0 55%,100% 0,100% 100%, 0% 100%);
+    transform: translateY(100%);
+}
+
+.cardcontent{
+    opacity: 0;
+    transition:opacity .25s;
+
+}
+
+.card:hover::before,
+.card:hover::after{
+    transform:translateY(0);
+}
+.card:hover .cardcontent{
+    opacity: 1;
+    transition-delay: .75s;
+}
+

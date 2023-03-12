@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline-grid;
+        /* display: inline; */
+        padding: 0 39px;
+    }
+    
+    header {
+        position: relative;
+         float: right; 
+        color: black;
+        background-color: rgb(65, 198, 65);
+        border: 4px double black;
+        flex-direction: row;
+        height: 97px;
+        font-size: xx-large;
+        z-index: 3;
+    }
+
+    img {
+        height: 70px;
+        position: absolute;
+
+    }
+
+    .container {
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .left {
+        background-color: rgb(52, 254, 187);
+        height: 120vh;
+        width: 40vw;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+    }
+
+    .right {
+        background-color: rgba(3, 59, 227, 0.699);
+        height: 120vh;
+        width: 40vw;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        flex: right;
+        font-size: larger;
+    }
+
+    #photo {
+        height: 116px;
+        width: 108px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid gray;
+        position: sticky;
+    }
+
+    #file {
+        display: none;
+
+    }
+
+    #upload {
+        height: 40px;
+        width: 80%;
+        position: absolute;
+        bottom: 600px;
+        left: 55px;
+        /* float: top; */
+        transform: translateX(-50%);
+        text-align: center;
+        background: rgba(0, 0, 0, alpha0, 7);
+        color: wheat;
+        font-size: 12px;
+        cursor: pointer;
+
+
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>home</li>
+                <li>contact</li>
+                <li>helpdesk</li>
+                <li>about</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="profile_pic">
+        <img src="index.png" alt="profile" id="photo">
+        <input type="file" id="file">
+        <label for="file" id="upload"><b>choose photo</b></label>
+    </div>
+    <div class="container">
+        <div class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quis nemo ullam ipsam possimus.
+        </div>
+        <div class="right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci blanditiis incidunt
+            obcaecati sapiente aliquam odit unde quae voluptas, quos hic ratione.</div>
+    </div>
+</body>
+
+</html>

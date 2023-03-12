@@ -1,0 +1,22 @@
+.arrow-4 {
+    width:40px;
+    height:30px;
+    display:grid;
+  }
+  .arrow-4:before,
+  .arrow-4:after {
+    content: "";
+    grid-area: 1/1;
+    background: currentColor;
+    clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+    animation: a4 .5s infinite alternate;
+  }
+  
+  .arrow-4:after {
+    --s:-1;
+  }
+  @keyframes a4 {
+    0%  {transform: scale(var(--s,1)) translate(12px,-6px) translate(4px)}
+    100%{transform: scale(var(--s,1)) translate(12px,-6px) translate(-4px)}
+  }
+  

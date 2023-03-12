@@ -1,0 +1,82 @@
+{
+	"name": "todo-txt",
+	"displayName": "todo-txt",
+	"description": "Todo.txt file management",
+	"version": "0.0.5",
+	"publisher": "rarnoldmobile",
+	"icon": "images/todo.png",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:plaintext"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.toggleCompletion",
+				"title": "todo-txt: Toggle Task Completion"
+			},
+			{
+				"command": "extension.archiveTasks",
+				"title": "todo-txt: Archive Completed Tasks"
+			},
+			{
+				"command": "extension.reactivateTask",
+				"title": "todo-txt: Reactivate Completed Task"
+			},
+			{
+				"command": "extension.sortProject",
+				"title": "todo-txt: Sort By Project"
+			},
+			{
+				"command": "extension.sortPriority",
+				"title": "todo-txt: Sort By Priority"
+			},
+			{
+				"command": "extension.sortDueDate",
+				"title": "todo-txt: Sort By Due Date"
+			},
+			{
+				"command": "extension.sortContext",
+				"title": "todo-txt: Sort By Context"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rarnoldmobile/todo-txt"
+	},
+	"dependencies": {
+		"path": "^0.12.7"
+	},
+	"license": "MIT",
+	"__metadata": {
+		"id": "e1286548-84b0-47e2-ae7f-5a973b46625b",
+		"publisherId": "ba7f6cc4-7854-4acc-b107-bc68730562f6",
+		"publisherDisplayName": "rarnoldmobile",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1677695360710,
+		"preRelease": false
+	}
+}

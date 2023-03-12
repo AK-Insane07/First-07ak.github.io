@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+nav{
+    display: flex;
+    position: sticky;
+    
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    border:  3mm ridge  rgb(215, 215, 29);
+    width: 100%;
+    /* background-color: rgb(181, 110, 66);  */
+    background-image: url(navwood.jpg);
+   
+}
+li {
+    cursor:pointer;
+    
+    color: rgb(94, 96, 2);
+    padding: 25px;
+    font-size: xx-large;
+     font-family: sans-serif;
+}
+
+ li  :hover{
+    color: rgb(228, 255, 106);
+    text-decoration: none;
+}
+
+.conta{
+    /* background-color: papayawhip; */
+    /* height: 10vh; */
+    background-image: url(thebg.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 149vh;
+}
+.part{
+    margin: 0 70px 0px 70px;
+    color: rgb(213, 255, 25);
+    height: 80vh;
+    border: 0.5mm ridge  black;
+    background-color: rgba(23, 84, 1, 0.432);
+}
+.fol{
+    display: flex;
+    padding: 44px;
+}
+.fol1{
+    display: flex;
+    justify-items: left;
+    text-align: left;
+    width: 40%;
+    padding-left: 12px;
+}
+
+
+.fol2{
+    padding-top: 29px;
+    display: flex;
+    justify-items: left;
+    text-align: left;
+    width: 40%;
+    padding-left: 12px;
+}
+h1{
+    padding: 39px;
+}
+.fol3{
+    width: 40%;
+    justify-items: left;
+    padding-left: 12px;
+    
+}

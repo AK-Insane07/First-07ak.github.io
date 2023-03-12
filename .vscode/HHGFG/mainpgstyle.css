@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+
+/* .navbar{
+    display: flex;
+    margin: 0;
+    padding: 12px;
+    border: 3mm ridge rgb(63, 204, 250);
+    
+   
+     
+    
+    position: sticky;
+    
+    cursor: pointer; 
+    background-color: aquamarine;
+     
+
+} 
+.nav-list{
+    width:70%;
+    /* background-color: orange; */
+    /* padding: 3px;
+    display: flex;
+    align-items: center; */
+    /* text-decoration: underline 3px solid   rgb(3, 171, 227); */
+/* } */
+/* 
+.nav-list li{
+    list-style: none;
+}
+
+.nav-list li a{
+    text-decoration:none;
+    color: rgb(15, 133, 25);
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-list li a:hover{
+    text-decoration: none;
+    color: rgb(12, 101, 143);
+}
+
+.rightNav{
+    /* background-color: orange; */
+    /* width: 30%;
+    text-align: right;
+    
+}  */
+
+.navbar{
+    background-color: rgba(158, 252, 221, 0.539);
+    position: fixed;
+    height: 39px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    box-shadow: 0px 10px 10px rgba(0 ,0,0,.3);
+    transition: all .3s;
+}
+
+
+#search{
+    padding: 8px;
+    font-size: small;
+    border: 2mm ridge solid rgb(12, 101, 143);
+    border-radius: 5px;
+}
+
+
+.small-big{
+    font-size: x-large;
+    margin: auto;
+}
+
+.btn{
+    padding: 6px 15px;
+    /* margin: 7px 1px */
+    margin-bottom: 3px; 
+    border: 3px solid  rgb(10, 145, 190);
+    border-radius: 7px;
+    font-size: 15px;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: none; 
+    cursor: pointer;
+}
+
+.btn-sm{
+    vertical-align: middle;
+}
+.fol{
+    background-image: url(mainpgimg.jpg);
+    height: 117vh; 
+    padding-top: 41px;
+    
+}
+.fol1{
+    background-color: rgba(9, 57, 71, 0.427);
+    margin: 0px 70px 0 70px;
+    height: 115vh;
+}
+.fol2{
+    color: rgb(3, 51, 67);
+    padding: 34px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    border: 2mm double aliceblue;
+    /* text-decoration:  solid aliceblue underline; */
+    font-size: 70px;
+}
+.fol3{
+     
+    color: black;
+    font-size: 26px;
+width: 45%;
+font-family: 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+padding: 14px;
+padding-bottom: 16px;
+}
+
+.p1{
+    color:  rgb(198, 245, 245);
+    padding-bottom: 14px;
+
+}
+.p2{
+    color:  rgb(198, 245, 245);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.fol4{
+    display: flex;
+    padding: 5px; ;
+      text-decoration: 8px solid underline ;
+      border: 4px double rgb(3, 139, 185) ;
+      color: rgb(198, 245, 245);
+      
+      font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+      
+}
+.fol5{
+    display: flex;
+    /* float: right; */
+    /* justify-content: space-between; */
+    color:rgb(198, 245, 245);
+    width: 45%;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.conta{
+    /* display: inline-block; */
+    background-color: rgba(0, 255, 213, 0.317);
+    /* text-decoration: none;  */
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    position: absolute;
+    bottom: 5px;
+    left: 880px;
+     line-height: 70px; 
+    width: 32vw ;
+    justify-content: center;
+    box-shadow: 0 7px 14px;
+    /* list-style: none; */
+    animation: animation 2s ease-in-out;
+    transition: 2s;
+}
+@keyframes animation {
+    from {
+        opacity: 0;
+        transform: translate(50px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+
+    }
+    
+}
+ 
+.conta .oo1 a:nth-child(1){
+   border-bottom-right-radius: 4px;
+   border-bottom-left-radius: 4px;
+}
+.conta .oo1 a:nth-child(1){
+   animation-delay: 1s;
+}
+
+.conta .oo2 a:nth-child(2){
+    animation-delay: 3s;
+ }
+ 
+.conta .oo3 a:nth-child(3){
+    animation-delay: 5s;
+ }
+ 
+.conta .oo4 a:nth-child(4){
+    animation-delay: 7s;
+ }
+ 
+.conta .oo5 a:nth-child(5){
+    animation-delay: 9s;
+ }
+
+
+
+.conta .oo1 {
+    border: 4px double antiquewhite;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.conta .oo2 {
+    border: 4px double antiquewhite;
+    text-align: center;
+    text-decoration: none;
+}
+
+.conta .oo3 {
+    border: 4px double antiquewhite;
+    text-align: center;
+    text-decoration: none;
+}
+
+.conta .oo4  {
+    border: 4px double antiquewhite;
+    text-align: center;
+    text-decoration: none;
+}
+.conta .oo5 {
+    border: 4px double antiquewhite;
+    text-align: center;
+    text-decoration: none;
+}
+
+.conta  a{
+    color: rgb(145, 255, 250);
+    }
+    .conta  a{
+        color: rgb(145, 255, 250);
+        }
+        .conta  a{
+            color: rgb(145, 255, 250);
+            }
+            .conta  a{
+                color: rgb(145, 255, 250);
+                }
+                .conta  a{
+                    color: rgb(145, 255, 250);
+                    }
+
+
+.conta  a:hover{
+    color:rgb(3, 51, 67);
+}
+.conta  a:hover{
+    color:rgb(3, 51, 67);
+}
+.conta  a:hover{
+    color:rgb(3, 51, 67);
+}
+.conta  a:hover{
+    color:rgb(3, 51, 67);
+}
+.conta  a:hover{
+    color:rgb(3, 51, 67);
+}
+
+/* 
+.login{
+    display: flex;
+    position:absolute ;
+    left:874px;
+    bottom: 284px;
+    font-size: 25px;
+    text-decoration: 3px underline;
+    color:  rgb(198, 245, 245);
+    
+}
+
+.email input{
+    display: flex;
+    position: absolute;
+    left:874px;
+    bottom: 200px; 
+    width: 30%;
+    border: 2px solid;
+    height: 25px;
+    text-align: center;
+}
+
+.pass input{
+    
+    text-align: center;
+    display: flex;
+    position: absolute;
+    left:874px;
+    bottom: 140px; 
+    width: 30%;
+    border: 2px solid;
+    height: 25px;
+} */
+
+
+
+
+
+
+
+footer{
+    padding-top: 25px;
+    text-align: center;
+    background-color: aquamarine ;
+    border: 2mm ridge solid  rgb(63, 204, 250);
+    color:rgb(38, 147, 28) ;
+    height: 33px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
