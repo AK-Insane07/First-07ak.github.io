@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.heading{
+    text-align: center;
+    /* font-family: fantasy; */
+    font-size: xx-large;
+    background-color: rgb(7, 34, 122);
+    color: white;
+}
+
+.background{
+    background-image: url("X6veSB.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(7, 34, 122);
+    color: aliceblue;
+    font-size: x-large;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.arrow img{
+    width: 10vh;
+    height: 10vh;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+
+.language .goog-te-gadget .goog-te-combo {
+    background: rgb(148, 218, 8);
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 75%;
+    font-weight: 600;
+    font-style: italic;
+    border: 2px solid black;
+    justify-items: right;
+    margin-bottom: 25px;
+    padding: 8px 30px;
+}
+
+.goog-te-banner-frame{
+    display: none !important;
+}
+
+.language .goog-te-gadget {
+    font-family: arial;
+    font-size: 0px;
+    color: #666;
+    white-space: nowrap;
+}
+
+
+.language .goog-te-gadget img {
+    vertical-align: middle;
+    border: none;
+    margin-left: 175px;
+    height: 0px;
+    width: 0px;
+}
+
+
+.language .skiptranslate .goog-logo-link{
+    font-size: 0px;
+}
+
+.language .goog-te-combo option{
+    background: palegoldenrod;
+    font-family: cursive;
+    font-size: small;
+    font-weight: bold;
+}
+
+.about{
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+    margin-bottom: 45px;
+    margin-top: 10px;
+    /* font-family:cursive; */
+
+    margin-left: 95px;
+    width: 80%;
+    
+}
+
+.contain1{
+    display: flex;
+    margin: 30px;
+}
+
+.subheading{
+    width: 20%;
+    color: rebeccapurple
+}
+
+.para{
+    width: 80%;
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.middle{
+    left: 50%; 
+    margin-left: 15%;
+    margin-top:25%; 
+    transform: translate(-50%,-50%);
+  }
+
+
+
+  .card{
+    cursor: pointer;
+    width: 240px;
+    height: 280px;
+  }
+  .front,.back{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+  }
+  .front img{
+    height: 100%;
+  }
+  .front{
+    transform: perspective(600px) rotateY(0deg);
+  }
+  .back{
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+  }
+  .back-content{
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+    margin-left: 92px;
+    margin-top: 140px;
+    /* justify-content: center; */
+  }
+ 
+   .back-content h2{
+    margin-bottom: 30px;
+    color: rebeccapurple;
+  } 
+
+  
+  .back-content h4{
+    margin: 10px;
+  } 
+  
+  .card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  .card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+  }
+  
+  
+  .center{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(7, 34, 122);
+    color: aliceblue;
+    font-size: x-large;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+
+  .crax{
+    display: flex;
+  }
+  
+  .prescribe{
+    margin-top: 75px;
+    font-size: xx-large;
+    color: rgb(75, 51, 161);
+  }

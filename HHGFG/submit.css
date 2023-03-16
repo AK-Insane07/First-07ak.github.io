@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aquamarine;
+    background-size: cover;
+
+}
+.sym1{
+    color: green;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+h1{
+    padding: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline ;
+    text-align: center;
+}

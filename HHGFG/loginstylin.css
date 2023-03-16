@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+nav{
+    display: flex;
+    position: sticky;
+    background-color: rgba(127, 248, 238, 0.717);
+    /* position: fixed;
+    width: 100%; */
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    border:  2mm ridge  rgb(121, 219, 217);
+    width: 100%;
+    box-shadow: rgb(71, 255, 255) 0 7px 14px;
+    /* background-color: rgb(181, 110, 66);  */
+    /* background-image: url(); */
+   
+}
+li {
+    cursor:pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    font-size: x-large;
+    /* font-family: sans-serif; */
+    text-decoration: none;
+}
+
+li  a{
+    font-weight: 400;
+    color: rgb(0, 174, 119);
+}
+ li a:hover{
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(20, 76, 61);
+} 
+
+
+
+.conta{
+    /* background-color: papayawhip; */
+    /* height: 10vh; */
+    padding-top: 40px; ;
+    background-image: url(loginimg.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 87vh;
+}
+.part{
+    margin: 0 70px 0px 70px;
+    color: rgb(25, 255, 194);
+    height: 80vh;
+    border: .9mm ridge  black;
+    box-shadow: 2px 2px 5px 5px rgb(71, 255, 255);
+    background-color: rgba(1, 84, 81, 0.47);
+    animation:ani1 1s ease-in;
+}
+@keyframes ani1 {
+    from{
+        opacity: 0;
+        transform: rotateY(360deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: 0;
+    }
+    
+}
+.fol{
+    display: flex;
+    padding: 44px;
+}
+.fol1{
+    display: flex;
+    justify-items: left;
+    text-align: left;
+    width: 40%;
+    padding-left: 12px;
+}
+
+
+.fol2{
+    padding-top: 29px;
+    display: flex;
+    justify-items: left;
+    text-align: left;
+    width: 40%;
+    padding-left: 12px;
+}
+h1{
+    padding: 39px;
+}
+.fol3{
+    width: 40%;
+    justify-items: left;
+    padding-left: 12px;
+    
+}
+.qqa{
+    position: absolute;
+    bottom: 370px;
+    left: 819px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 45px;
+    text-decoration: 4px underline ;
+    color: rgb(25, 255, 194) ;
+}
+.as{
+   position: absolute;
+   bottom: 340px;
+   left: 859px;
+   justify-content: center;
+   font-weight: 800;
+   color:rgb(25, 255, 194) ;
+}
+.as input{
+    width: 200%;
+    height: 23px;
+    align-items: center;
+    font-weight: 800;
+
+}
+.as1{
+    position: absolute;
+    bottom: 240px;
+    left: 859px;
+    justify-content: center;
+    font-weight: 800;
+    color:rgb(25, 255, 194) ;
+ }
+ .as1 input{
+     width: 100%;
+     height: 23px;
+     align-items: center;
+     
+     font-weight: 800;
+     
+    }
+.as2 {
+     position: absolute;
+      padding: 70px;
+ }
+
+ .submit{
+    border: 3px solid rgb(130, 240, 255);
+    padding: 6px;
+    border-radius: 10px;
+    display: inline-block; 
+    position: absolute;
+    width: 100px;
+    bottom: 200px;
+    left: 859px;
+    text-decoration: none;
+    list-style: none;
+
+ }
+.submit:hover{
+    animation: pulsate 3s ease-in-out;
+    font-weight: 600;
+    text-decoration: none;
+    list-style: none;
+}
+
+.zz1{
+    color: rgb(11, 151, 175);
+    
+}
+
+.zz1 :hover{
+   color: rgb(7, 96, 67);
+}
+@keyframes pulsate {
+ 0%{
+    box-shadow: 
+    0 0 25px rgb(109, 237, 247),0 0 50px rgb(236, 61, 236)
+
+ }    
+}
+
+
+
+footer{
+    padding-top: 25px;
+    text-align: center;
+    background-color: rgb(25, 255, 194) ;
+    border: 3px solid  rgb(40, 72, 69);
+    color: rgb(3, 91, 88);
+    height: 33px;
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

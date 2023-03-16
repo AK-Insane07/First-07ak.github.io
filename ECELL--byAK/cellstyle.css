@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: black;
+}
+h1{
+    color: antiquewhite;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.card{
+    margin: 40px;
+    padding: 50px;
+    width: 70vw;
+    height: 80vh;
+    background-color: rgba(120, 249, 111, 0.308);
+    color: antiquewhite;
+    animation: ani1 1s ease-in-out alternate-reverse;
+    border: 5px double aliceblue;
+}
+@keyframes ani1 {
+    from{
+        opacity: 0;
+        transform: rotateY(360deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: 0;
+    }
+    
+}
+.card1{
+    background-repeat: no-repeat;
+    background-image: url(E-cellbyAk.jpg);
+    position: relative;
+    padding: 0px;
+    height: 500px;
+    width: 500px;
+    animation: ani2 1.5s ease-in alternate;
+    left: 50px;
+}
+@keyframes ani2 {
+    from{
+        opacity: 0;
+        transform: rotateY(3600deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: 0;
+    }
+    
+}
+.butt{
+    position: absolute;
+    left: 290px;
+    padding: 8px;
+    border: 1mm ridge  bisque;
+}
+
+.buttin{
+    font-size: medium;
+    color: black;
+    font-weight: 400;
+    padding: 5px;
+}
+.buttin:hover{
+    font-weight: 800;
+    color: blueviolet;
+    animation: pulse 4s ease-in-out;
+}
+@keyframes pulse {
+    0%{
+        box-shadow:   0 0 25px rgb(109, 237, 247),0 0 50px rgb(236, 61, 236);
+        
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter7</title>
+</head>
+<style>
+    .progress {
+        background-color: red;
+        height: 9px;
+        animation: load 2s ease-in-out 0.6s;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        height: 23px;
+        background-color: black;
+
+
+    }
+
+    main {
+        height: 889px;
+        background-color: aqua;
+    }
+
+    @keyframes load {
+        0% {
+            width: 0;
+        }
+
+        50% {
+            width: 60vw;
+        }
+
+        100% {
+            width: 100vw;
+        }
+
+    }
+
+    @keyframes rotate {
+
+        0% {
+            width: 0;
+            transform: rotate(0deg);
+        }
+
+        100% {
+
+            transform: rotate(360deg);
+        }
+
+    }
+
+    .slider {
+        background-color: burlywood;
+        height: 470px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+    }
+
+    .img1 {
+
+        transform: translate(-38vw);
+        animation: slide1 3s 1s forwards; 
+    }
+
+    .img2 {
+        transform: translate(0vw); 
+        animation: slide2 6s 1s reverse;
+    }
+
+    .img3 {
+        transform: translate(38vw);
+        animation: slide3 4s 1s alternate-reverse;
+    }
+
+    @keyframes slide1 {
+
+        0% {
+            width: 0;
+            transform: translate(-38vw);
+        }
+
+        100% {
+
+            transform: translate(105vw);
+        }
+
+     @keyframes slide2 {
+
+            0% {
+                width: 0;
+                transform: translate(0vw);
+            }
+
+            100% {
+
+                transform: translate(112vw);
+            }
+
+            @keyframes slide3 {
+
+                0% {
+                    width: 0;
+                    transform: translate(38vw);
+                }
+
+                100% {
+
+                    transform: translate(105vw);
+                }
+            }
+</style>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="slider">
+            <img class="img1"
+                src="https://media.istockphoto.com/photos/honeybee-on-calendula-flower-picture-id1345476161?s=612x612"
+                alt="">
+            <img class="img2"
+                src="https://media.istockphoto.com/photos/falling-autumn-leaves-before-sunset-picture-id1176602671?s=612x612"
+                alt="">
+            <img class="img3"
+                src="https://media.istockphoto.com/vectors/maple-leaves-autumn-background-vector-vector-id1268075097"
+                alt="">
+        </div>
+    </main>
+
+</body>
+<script>
+
+</script>
+</html>
